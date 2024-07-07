@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .moon {
+    position: relative;
+    width: 300px;  /* Further increased size */
+    height: 300px; /* Further increased size */
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: moveMoon 5s linear infinite, moonGlow 2s ease-in-out infinite alternate;
+  }
+  
+  .moon-text {
+    position: absolute;
+    color: #00ff00; /* Green color */
+    font-size: 32px; /* Further increased size */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    animation: textAnimation 3s ease-in-out infinite;
+  }
+  
+  @keyframes moveMoon {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes moonGlow {
+    0% { box-shadow: 0 0 10px #fff; }
+    100% { box-shadow: 0 0 50px #fff; }
+  }
+  
+  @keyframes textAnimation {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+  }
+  
